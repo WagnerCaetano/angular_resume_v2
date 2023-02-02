@@ -1,0 +1,169 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  color: #121212;
+}
+
+.intro {
+  padding-top: 3rem;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  .vertical {
+    gap: 0.5rem;
+    .title {
+      font-size: 32px !important;
+      font-weight: 800 !important;
+      color: #0a58ca !important;
+      font-family: "Poppins";
+    }
+  }
+
+  .vertical:first-child {
+    p {
+      text-align: center;
+      font-weight: 100;
+      font-style: italic;
+      margin-top: 0.25rem;
+      color: #0a58ca;
+    }
+  }
+
+  .vertical:last-child {
+    justify-content: space-evenly;
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      color: #4a4a4a;
+      font-family: "Poppins";
+    }
+  }
+}
+
+.about,
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-direction: column;
+
+  .box {
+    min-width: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(10, 10, 10, 0.1);
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem 0rem;
+    text-align: center;
+    p {
+      padding: 0 !important;
+      margin: 0 !important;
+      font-weight: 100;
+    }
+    i {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+
+  i {
+    font-size: 32px;
+    color: #0a58ca;
+    padding: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    width: 100%;
+    align-content: space-evenly;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: #0a58ca !important;
+    font-family: "Poppins";
+  }
+}
+
+.skills {
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-gap: 1rem;
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 5rem !important;
+        height: 5rem !important;
+      }
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  min-width: 15vw;
+  width: auto;
+  max-width: 60vw;
+
+  clip-path: circle(50%);
+}
+
+.scroll-down {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 5rem 0rem 5rem 0rem;
+  color: rgba(12, 12, 12, 0.5) !important;
+}
+
+@media only screen and (min-width: 900px) {
+  .intro {
+    gap: 4rem;
+  }
+
+  img {
+    min-width: 13vw;
+    width: fit-content;
+    max-width: 15vw;
+  }
+
+  .about,
+  .skills,
+  .contacts {
+    padding: 0rem 15rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .intro {
+    gap: 10rem;
+  }
+
+  img {
+    min-width: 13vw;
+    width: fit-content;
+    max-width: 15vw;
+  }
+
+  .about,
+  .skills,
+  .contacts {
+    padding: 0rem 30rem;
+  }
+}

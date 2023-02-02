@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import "./../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background: linear-gradient(70deg,rgba(240, 253, 253, 1) 10%,rgba(240, 235, 235, 1) 60%);
+    font-family: 'Roboto', 'Poppins';
+}
+
+i {
+    padding: 1rem;
+}

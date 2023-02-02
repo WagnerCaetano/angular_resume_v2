@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md">
+  <div>
+    <p class="title">Wagner Caetano</p>
+  </div>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Inicio</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Serviços</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Habilidades</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contato</a>
+      </li>
+    </ul>
+  </div>
+</nav>
