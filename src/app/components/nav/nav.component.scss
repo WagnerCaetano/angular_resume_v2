@@ -14,12 +14,19 @@ nav {
     justify-content: space-evenly;
   }
 
-  a {
+  span {
     font-size: 1.5rem;
+    cursor: pointer;
   }
 }
 
 @media (min-width: 900px) {
+  nav {
+    padding: 0rem 15rem;
+    .navbar-collapse:not(.show) {
+      justify-content: right;
+    }
+  }
 }
 @media (min-width: 1400px) {
   nav {

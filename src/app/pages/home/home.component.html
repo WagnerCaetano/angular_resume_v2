@@ -1,6 +1,6 @@
-<app-nav></app-nav>
+<app-nav (clickedRoute)="clickedRouted($event)"></app-nav>
 
-<div class="intro">
+<div class="intro" id="intro">
   <div class="vertical">
     <img src="../../../assets/img/profile.jpg" alt="" />
     <p>_____ Desenvolvedor Fullstack</p>
@@ -12,15 +12,19 @@
       Bem vindo ao meu website<br />
       fique a vontade para me conhecer :D
     </p>
-    <app-button [text]="'Download CV'"></app-button>
+    <app-button [text]="'Download CV'" (click)="download()"></app-button>
   </div>
 </div>
-<p class="scroll-down">scroll down<i class="bi bi-arrow-down-short"></i></p>
+<div class="scroll-down">
+  <p (click)="clickedRouted({ fragment: 'about' })">
+    scroll down<i class="bi bi-arrow-down-short"></i>
+  </p>
+</div>
 
-<div class="about">
+<div class="about" id="about">
   <p class="title">Minha trajetória</p>
 
-  <div>
+  <div class="box-wrapper">
     <div class="box">
       <i class="bi bi-award"></i>
       <p>
@@ -30,7 +34,7 @@
     </div>
     <div class="box">
       <i class="bi bi-journal-check"></i>
-      <p>Aws Certied Practioner<br /></p>
+      <p>Aws Certified Practioner<br /></p>
     </div>
     <div class="box">
       <i class="bi bi-pc-display"></i>
@@ -59,10 +63,10 @@
   <div>
     <i class="bi bi-arrow-right"></i>
     <p>
-      No meu primeiro ano como estagiário trabalhei em uma equipe da Sulamerica,
-      cliente da CI&T, onde aprendi as melhores práticas de desenvolvimento de
-      software, Spring Boot, Angular, Unit Testing, Component Testing, alguns
-      termos e conhecimentos sobre o mercado em em geral.
+      No meu primeiro ano como estagiário trabalhei em uma empresa de seguros de
+      saude, cliente da CI&T, onde aprendi as melhores práticas de
+      desenvolvimento de software, Spring Boot, Angular, Unit Testing, Component
+      Testing, alguns termos e conhecimentos sobre o mercado em em geral.
     </p>
   </div>
 
@@ -87,9 +91,9 @@
   </div>
 </div>
 
-<p class="scroll-down"><i class="bi bi-arrow-down-short"></i></p>
+<p class="scroll-down"><i (click)="clickedRouted({ fragment: 'skills' })"class="bi bi-arrow-down-short"></i></p>
 
-<div class="skills">
+<div class="skills" id="skills">
   <p class="title">Minhas habilidades</p>
 
   <div>

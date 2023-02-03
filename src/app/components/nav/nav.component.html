@@ -9,24 +9,8 @@
 
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Inicio</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sobre</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Serviços</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Habilidades</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contato</a>
+      <li class="nav-item" *ngFor="let item of items">
+        <span class="nav-link" (click)="navigate(item.url)">{{item.name}}</span>
       </li>
     </ul>
   </div>

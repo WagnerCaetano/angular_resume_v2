@@ -52,6 +52,10 @@
   padding: 2rem;
   flex-direction: column;
 
+  .box-wrapper {
+    flex-direction: column;
+  }
+
   .box {
     min-width: 3rem;
     display: flex;
@@ -125,11 +129,21 @@ img {
 }
 
 .scroll-down {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 14px;
   font-weight: 100;
   padding: 5rem 0rem 5rem 0rem;
   color: rgba(12, 12, 12, 0.5) !important;
+  p {
+    cursor: pointer;
+  }
+  i {
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -146,6 +160,9 @@ img {
   .about,
   .skills,
   .contacts {
+    .box-wrapper {
+      flex-direction: row;
+    }
     padding: 0rem 15rem;
   }
 }
@@ -156,6 +173,9 @@ img {
   }
 
   img {
+    .box-wrapper {
+      flex-direction: row;
+    }
     min-width: 13vw;
     width: fit-content;
     max-width: 15vw;
