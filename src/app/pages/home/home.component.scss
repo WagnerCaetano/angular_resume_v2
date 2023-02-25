@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   color: #121212;
+  background: linear-gradient(
+    70deg,
+    rgba(240, 253, 253, 1) 10%,
+    rgba(240, 235, 235, 1) 60%
+  );
+  font-family: "Roboto", "Poppins" !important;
 }
 
 .intro {
@@ -40,6 +46,14 @@
       color: #4a4a4a;
       font-family: "Poppins";
     }
+  }
+
+  img {
+    min-width: 15vw;
+    width: auto;
+    max-width: 60vw;
+  
+    clip-path: circle(50%);
   }
 }
 
@@ -108,8 +122,8 @@
       justify-content: center;
       align-items: center;
       img {
-        width: 5rem !important;
-        height: 5rem !important;
+        width: 50px !important;
+        height: 50px !important;
       }
     }
   }
@@ -118,14 +132,6 @@
 .contacts {
   display: flex;
   justify-content: center;
-}
-
-img {
-  min-width: 15vw;
-  width: auto;
-  max-width: 60vw;
-
-  clip-path: circle(50%);
 }
 
 .scroll-down {
@@ -149,12 +155,11 @@ img {
 @media only screen and (min-width: 900px) {
   .intro {
     gap: 4rem;
-  }
-
-  img {
-    min-width: 13vw;
-    width: fit-content;
-    max-width: 15vw;
+    img {
+      min-width: 13vw;
+      width: fit-content;
+      max-width: 15vw;
+    }
   }
 
   .about,
@@ -170,15 +175,15 @@ img {
 @media only screen and (min-width: 1400px) {
   .intro {
     gap: 10rem;
-  }
 
-  img {
-    .box-wrapper {
-      flex-direction: row;
+    img {
+      .box-wrapper {
+        flex-direction: row;
+      }
+      min-width: 13vw;
+      width: fit-content;
+      max-width: 15vw;
     }
-    min-width: 13vw;
-    width: fit-content;
-    max-width: 15vw;
   }
 
   .about,
