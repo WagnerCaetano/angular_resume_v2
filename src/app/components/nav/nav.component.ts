@@ -1,12 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  imports: [CommonModule],
 })
 export class NavComponent {
   items = [
@@ -27,7 +24,7 @@ export class NavComponent {
     {
       name: 'Serviços',
       url: {
-        externalLink: '/agency',
+        externalLink: 'https://wagnercaetano.com/agencia/',
       },
     },
     {
@@ -50,6 +47,9 @@ export class NavComponent {
   @Output()
   clickedRoute = new EventEmitter();
 
+  @Output()
+  languageEmitter = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -60,5 +60,9 @@ export class NavComponent {
 
   navigate(item: any) {
     this.clickedRoute.emit(item);
+  }
+
+  languageHandle(event: any) {
+    this.languageEmitter.emit(event);
   }
 }

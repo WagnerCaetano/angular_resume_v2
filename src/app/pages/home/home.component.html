@@ -1,16 +1,16 @@
-<app-nav (clickedRoute)="clickedRouted($event)"></app-nav>
+<app-nav (languageEmitter)="handleLanguage($event)" (clickedRoute)="clickedRouted($event)"></app-nav>
 
 <div class="intro" id="intro">
   <div class="vertical">
-    <img src="https://wagnercaetano.com/agency/wp-content/uploads/2023/01/unnamed.jpg" alt="" />
-    <p>_____ Desenvolvedor Fullstack</p>
+    <img src="https://wagnercaetano.com/wp-content/uploads/data/profile.jpg" alt="" />
+    <p>{{'RESUME_HOME.PRESENTATION.DEVELOPER' | translate }}</p>
   </div>
   <div class="vertical">
     <p class="title">Wagner Caetano</p>
     <p>
-      Olá, tudo bem ?? <br />
-      Bem vindo ao meu website<br />
-      fique a vontade para me conhecer :D
+      {{'RESUME_HOME.PRESENTATION.HELLO' | translate}}<br />
+      {{'RESUME_HOME.PRESENTATION.WELCOME_FIRST' | translate}}<br />
+      {{'RESUME_HOME.PRESENTATION.WELCOME_SECOND' | translate}}<br />
     </p>
     <app-button [text]="'Download CV'" (click)="download()"></app-button>
   </div>
@@ -22,14 +22,13 @@
 </div>
 
 <div class="about" id="about">
-  <p class="title">Minha trajetória</p>
+  <p class="title">{{'RESUME_HOME.ABOUT.TRAJECTORY.TITLE' | translate}}</p>
 
   <div class="box-wrapper">
     <div class="box">
       <i class="bi bi-award"></i>
       <p>
-        Experiência<br />
-        3 anos
+        {{'RESUME_HOME.ABOUT.TRAJECTORY.XP' | translate}}
       </p>
     </div>
     <div class="box">
@@ -38,55 +37,42 @@
     </div>
     <div class="box">
       <i class="bi bi-pc-display"></i>
-      <p>Engenheiro de software pleno</p>
+      <p>{{'RESUME_HOME.ABOUT.TRAJECTORY.JOB' | translate}}</p>
     </div>
   </div>
 
   <div>
     <i class="bi bi-caret-right-fill"></i>
     <p>
-      Meus estudos de programação começaram na Cotuca, uma escola técnica em
-      Campinas, onde fiz um curso de 2 anos aprendendo Java, .NET, SQL, Python,
-      e um pouco de Arduino, além de outras tecnologias.
+      {{'RESUME_HOME.STUDIES.FIRST' | translate}}
     </p>
   </div>
 
   <div>
     <i class="bi bi-arrow-right"></i>
     <p>
-      Depois de terminar esses 2 anos, tentei alguns processos de estágio para
-      entrar em diferentes empresas. Eventualmente entrei no CI&T como
-      Estagiário, de 1200 participantes fui um dos 90 que entrou.
+      {{'RESUME_HOME.STUDIES.SECOND' | translate}}
     </p>
   </div>
 
   <div>
     <i class="bi bi-arrow-right"></i>
     <p>
-      No meu primeiro ano como estagiário trabalhei em uma empresa de seguros de
-      saude, cliente da CI&T, onde aprendi as melhores práticas de
-      desenvolvimento de software, Spring Boot, Angular, Unit Testing, Component
-      Testing, alguns termos e conhecimentos sobre o mercado em em geral.
+      {{'RESUME_HOME.STUDIES.THIRD' | translate}}
     </p>
   </div>
 
   <div>
     <i class="bi bi-arrow-right"></i>
     <p>
-      Atuei em um produto para agendamento de consultas de pacientes com
-      médicos, através de um App, uma infraestrutura de microsserviços criada
-      específica para este fluxo, e também uma plataforma web angular onde o
-      auxiliar do médico poderia escolher o melhor horário para o paciente e
-      para o médico.
+      {{'RESUME_HOME.STUDIES.FOURTH' | translate}}
     </p>
   </div>
 
   <div>
     <i class="bi bi-arrow-right"></i>
     <p>
-      Após quase dois anos trabalhando na Sulamerica, mudei para um dos maiores
-      bancos nacionais do Brasil, que também é cliente da CI&T, desde então
-      venho trabalhando com LGPD e dados cadastrais em um produto para o banco.
+      {{'RESUME_HOME.STUDIES.FIFTH' | translate}}
     </p>
   </div>
 </div>
@@ -94,39 +80,39 @@
 <p class="scroll-down"><i (click)="clickedRouted({ fragment: 'skills' })"class="bi bi-arrow-down-short"></i></p>
 
 <div class="skills" id="skills">
-  <p class="title">Minhas habilidades</p>
+  <p class="title">{{'RESUME_HOME.SKILLS.TITLE' | translate}}</p>
 
   <div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/angular.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/angular.png" alt="" />
       <p>Angular</p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/java.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/java.png" alt="" />
       <p>Java<br /></p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/wordpress.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/wordpress.png" alt="" />
       <p>Wordpress</p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/spring.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/spring.png" alt="" />
       <p>Spring Boot</p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/typescript.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/typescript.png" alt="" />
       <p>Typescript</p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/git.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/git.png" alt="" />
       <p>Git<br /></p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/vscode.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/vscode.png" alt="" />
       <p>VSCode</p>
     </div>
     <div class="box">
-      <img src="http://localhost/meu-site/wp-content/uploads/data/icons/scss.png" alt="" />
+      <img src="http://wagnercaetano.com/wp-content/uploads/data/icons/scss.png" alt="" />
       <p>SCSS</p>
     </div>
   </div>

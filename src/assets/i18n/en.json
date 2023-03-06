@@ -1,0 +1,29 @@
+{
+    "RESUME_HOME": {
+      "PRESENTATION": {
+        "DEVELOPER": "_____ Desenvolvedor Fullstack",
+        "HELLO": "Olá, tudo bem ??",
+        "WELCOME_FIRST": "Bem vindo ao meu website",
+        "WELCOME_SECOND": "fique a vontade para me conhecer :D"
+      },
+      "ABOUT": {
+        "TRAJECTORY": {
+          "TITLE": "Minha trajetória",
+          "XP": "Experiência<br />3 anos",
+          "JOB": "Mid Software Engineer"
+        }
+      },
+      "STUDIES": {
+        "FIRST": "Meus estudos de programação começaram na Cotuca, uma escola técnica em Campinas, onde fiz um curso de 2 anos aprendendo Java, .NET, SQL, Python, e um pouco de Arduino, além de outras tecnologias.",
+        "SECOND": "Depois de terminar esses 2 anos, tentei alguns processos de estágio para entrar em diferentes empresas. Eventualmente entrei no CI&T como Estagiário, de 1200 participantes fui um dos 90 que entrou.",
+        "THIRD": "No meu primeiro ano como estagiário trabalhei em uma empresa de seguros de saude, cliente da CI&T, onde aprendi as melhores práticas de desenvolvimento de software, Spring Boot, Angular, Unit Testing, Component Testing, alguns termos e conhecimentos sobre o mercado em em geral.",
+        "FOURTH": "Atuei em um produto para agendamento de consultas de pacientes com médicos, através de um App, uma infraestrutura de microsserviços criada específica para este fluxo, e também uma plataforma web angular onde o auxiliar do médico poderia escolher o melhor horário para o paciente e para o médico.",
+        "FIFTH": "Após quase dois anos trabalhando na Sulamerica, mudei para um dos maiores bancos nacionais do Brasil, que também é cliente da CI&T, desde então venho trabalhando com LGPD e dados cadastrais em um produto para o banco."
+      },
+  
+      "SKILLS": {
+        "TITLE": "Minhas habilidades"
+      }
+    }
+  }
+  
