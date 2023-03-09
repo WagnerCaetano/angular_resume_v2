@@ -24,16 +24,10 @@ nav {
 @media (min-width: 900px) {
   nav {
     padding: 0rem 15rem;
-    .navbar-collapse:not(.show) {
-      justify-content: right;
-    }
   }
 }
 @media (min-width: 1400px) {
   nav {
     padding: 0rem 30rem;
-    .navbar-collapse:not(.show) {
-      justify-content: right;
-    }
   }
 }

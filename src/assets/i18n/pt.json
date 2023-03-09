@@ -1,4 +1,11 @@
 {
+  "RESUME_NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Sobre",
+    "SERVICES": "Serviços",
+    "ABILITIES": "Habilidades",
+    "CONTACT": "Contato"
+  },
   "RESUME_HOME": {
     "PRESENTATION": {
       "DEVELOPER": "_____ Desenvolvedor Fullstack",
@@ -9,8 +16,8 @@
     "ABOUT": {
       "TRAJECTORY": {
         "TITLE": "Minha trajetória",
-        "XP": "Experiência<br />3 anos",
-        "JOB": "Mid Software Engineer"
+        "XP": "Experiência\n3 anos",
+        "JOB": "Engenheiro de Software Pleno"
       }
     },
     "STUDIES": {

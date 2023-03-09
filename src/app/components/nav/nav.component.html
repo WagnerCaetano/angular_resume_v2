@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let item of items">
-        <span class="nav-link" (click)="navigate(item.url)">{{item.name}}</span>
+        <span class="nav-link" (click)="navigate(item.url)">{{item.name | translate}}</span>
       </li>
     </ul>
   </div>

@@ -1,47 +1,23 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+
+export interface LinksInfo {
+  name: string;
+  url: {
+    externalLink: any;
+    fragment?: string;
+  }
+}
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
+  changeDetection:  ChangeDetectionStrategy.OnPush
 })
 export class NavComponent {
-  items = [
-    {
-      name: 'Inicio',
-      url: {
-        externalLink: null,
-        fragment: 'intro',
-      },
-    },
-    {
-      name: 'Sobre',
-      url: {
-        externalLink: null,
-        fragment: 'about',
-      },
-    },
-    {
-      name: 'Serviços',
-      url: {
-        externalLink: 'https://wagnercaetano.com/agencia/',
-      },
-    },
-    {
-      name: 'Habilidades',
-      url: {
-        externalLink: null,
-        fragment: 'skills',
-      },
-    },
-    {
-      name: 'Contato',
-      url: {
-        externalLink: null,
-        fragment: 'contacts',
-      },
-    },
-  ];
+  items: LinksInfo[] = [];
   navbarOpen = false;
 
   @Output()
@@ -50,9 +26,51 @@ export class NavComponent {
   @Output()
   languageEmitter = new EventEmitter();
 
-  constructor() {}
+  constructor(private translateService: TranslateService) {
+    translateService.setDefaultLang('en');
+    translateService.addLangs(['en', 'pt']);
+    translateService.use('en');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.items =  [
+      {
+        name:'RESUME_NAV.HOME',
+        url: {
+          externalLink: null,
+          fragment: 'intro',
+        },
+      },
+      {
+        name:'RESUME_NAV.ABOUT',
+        url: {
+          externalLink: null,
+          fragment: 'about',
+        },
+      },
+      {
+        name:'RESUME_NAV.SERVICES',
+        url: {
+          externalLink: 'https://wagnercaetano.com/agencia/',
+        },
+      },
+      {
+        name:'RESUME_NAV.ABILITIES',
+        url: {
+          externalLink: null,
+          fragment: 'skills',
+        },
+      },
+      {
+        name:'RESUME_NAV.CONTACT',
+        url: {
+          externalLink: null,
+          fragment: 'contacts',
+        },
+      },
+    ];
+  }
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
@@ -63,6 +81,8 @@ export class NavComponent {
   }
 
   languageHandle(event: any) {
+    this.translateService.use(event.name);
+    this.translateService.resetLang
     this.languageEmitter.emit(event);
   }
 }

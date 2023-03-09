@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import "./../node_modules/bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "../node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss";
 
 app-root {
   div {
@@ -22,4 +23,6 @@ app-root {
   i {
     padding: 1rem;
   }
+
+  white-space: pre-wrap;
 }
